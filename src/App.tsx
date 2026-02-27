@@ -4,7 +4,7 @@ function App() {
   const [secret, setSecret] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/secrets")
+    fetch("/secret")
       .then((res) => res.json())
       .then((data) => setSecret(data))
       .catch((err) => console.error(err));
