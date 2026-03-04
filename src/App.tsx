@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     fetch("/hello")
       .then((res) => res.json())
-      .then((data) => setMsg(data))
+      .then((resp) => setMsg(resp.message))
       .catch((err) => console.error(err));
   }, []);
 
