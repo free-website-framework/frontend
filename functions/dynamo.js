@@ -17,7 +17,7 @@ export const onRequest = async (context) => {
     });
 
     const incoming = new URL(context.request.url);
-    const backendUrl = context.env.BACKEND_URL + incoming.pathname + incoming.search;
+    const backendUrl = new URL(incoming.pathname + incoming.search, context.env.BACKEND_URL);
     console.log("backendUrl:", backendUrl);
 
     const response = await signedFetch(backendUrl, {
