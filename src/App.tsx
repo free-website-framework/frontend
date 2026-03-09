@@ -34,9 +34,10 @@ function App() {
     <div>
       <h1>Hello:</h1>
       <pre>{msg}</pre>
+      <h1>DynamoDB:</h1>
       <input value={value} onChange={(e) => setValue(e.target.value)} />
       <button onClick={send}>Send</button>
-      <div>{data}</div>
+      <div>value: {data}</div>
     </div>
   );
 }
